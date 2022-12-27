@@ -197,13 +197,10 @@ class Date {
   Date get previousWeek => subDays(7);
 
   /// Get a [Date] representing start of week of this [Date] in local time.
-  Date get startOfWeek => weekday == DateTime.sunday ? this : subDays(weekday);
-
-  /// Get a [Date] representing start of week (ISO week) of this [Date] in local time.
-  Date get startOfISOWeek => subDays(weekday - 1);
+  Date get startOfWeek => subDays(weekday - 1);
 
   /// Get a [Date] representing start of week of this [Date] in local time.
-  Date get startOfWeekend => subDays(DateTime.saturday - weekday);
+  Date get startOfWeekend => addDays(DateTime.saturday - weekday);
 
   /// Get a [Date] representing start of month of this [Date] in local time.
   Date get startOfMonth => setDay(1);
@@ -211,16 +208,13 @@ class Date {
   /// Get a [Date] representing start of year of this [Date] in local time.
   Date get startOfYear => DateTime(year, DateTime.january, 1).date;
 
-  /// Return the end of ISO week for this date. The result will be in the local timezone.
-  Date get endOfISOWeek => startOfISOWeek.addDays(6);
-
-  /// Return the end of the week for this date. The result will be in the local timezone.
+  /// Return the end of week for this date. The result will be in the local timezone.
   Date get endOfWeek => startOfWeek.addDays(6);
 
   /// Get a [Date] representing end of weekend of this [Date] in local time.
   Date get endOfWeekend => startOfWeekend.addDays(1);
 
-  // Return the end of the year for this date. The result will be in the local timezone.
+  /// Return the end of the year for this date. The result will be in the local timezone.
   Date get endOfYear =>
       Date(year: year, month: DateTime.december, day: 1).endOfMonth;
 
@@ -244,16 +238,16 @@ class Date {
       Date(year: year, month: quarterEndMonth, day: 1).endOfMonth;
 
   /// Get the week index
-  int get getWeek => addDays(1).getISOWeek;
-
-  /// Get the ISO week index
-  int get getISOWeek {
+  ///
+  /// Also see https://en.wikipedia.org/wiki/ISO_week_date#Calculating_the_week_number_from_an_ordinal_date
+  int get getWeek {
     final woy = (_ordinalDate - weekday + 10) ~/ 7;
 
     // If the week number equals zero, it means that the given date belongs to the preceding (week-based) year.
     if (woy == 0) {
+      // If the week number obtained equals 0, it means that the given date belongs to the preceding (week-based) year.
       // The 28th of December is always in the last week of the year
-      return Date(year: year - 1, month: 12, day: 28).getISOWeek;
+      return Date(year: year - 1, month: 12, day: 28).getWeek;
     }
 
     // If the week number equals 53, one must check that the date is not actually in week 1 of the following year
@@ -317,11 +311,8 @@ class Date {
   /// Check if this date is in the same quarter
   bool isSameQuarter(Date other) => startOfQuarter == other.startOfQuarter;
 
-  /// Check if this date is in the same week than other
-  bool isSameWeek(Date other) => startOfWeek == other.startOfWeek;
-
   /// Check if this date is in the same iso week than other
-  bool isSameISOWeek(Date other) => startOfISOWeek == other.startOfISOWeek;
+  bool isSameWeek(Date other) => startOfWeek == other.startOfWeek;
 
   /// Check if this date is in the same year than other
   bool isSameYear(Date other) => year == other.year;
@@ -330,7 +321,7 @@ class Date {
   bool get isThisWeek => isSameWeek(Date.today());
 
   /// Check if this date is in the same month than [Date.today]
-  bool get isThisIsoWeek => isSameISOWeek(Date.today());
+  bool get isThisIsoWeek => isSameWeek(Date.today());
 
   /// Check if this date is in the same month than [Date.today]
   bool get isThisMonth => isSameMonth(Date.today());

@@ -109,19 +109,11 @@ void main() {
     });
 
     then('is same week', () {
-      date2.isSameWeek(date3).should.beTrue();
+      date1.isSameWeek(date2).should.beTrue();
     });
 
     then('is not same week', () {
-      date1.isSameWeek(date2).should.beFalse();
-    });
-
-    then('is same ISO week', () {
-      date1.isSameISOWeek(date2).should.beTrue();
-    });
-
-    then('is not same ISO week', () {
-      date2.isSameISOWeek(date3).should.beFalse();
+      date2.isSameWeek(date3).should.beFalse();
     });
 
     then('is same month', () {
@@ -491,30 +483,6 @@ void main() {
       res.year.should.be(2021);
     });
 
-    then('Start of week', () {
-      final res = date.startOfWeek;
-
-      res.day.should.be(9);
-      res.month.should.be(5);
-      res.year.should.be(2021);
-    });
-
-    then('Start of ISO week', () {
-      final res = date.startOfISOWeek;
-
-      res.day.should.be(10);
-      res.month.should.be(5);
-      res.year.should.be(2021);
-    });
-
-    then('Start of weekend', () {
-      final res = date.startOfWeekend;
-
-      res.day.should.be(15);
-      res.month.should.be(5);
-      res.year.should.be(2021);
-    });
-
     then('End of year', () {
       final res = date.endOfYear;
 
@@ -538,29 +506,51 @@ void main() {
       res.month.should.be(5);
       res.year.should.be(2021);
     });
+  });
 
-    then('End of week', () {
-      final res = date.endOfWeek;
+  group('Week-based operations', () {
+    final monday = Date(year: 2022, month: 7, day: 11);
+    final tuesday = monday.addDays(1);
+    final wednesday = monday.addDays(2);
+    final thursday = monday.addDays(3);
+    final friday = monday.addDays(4);
+    final saturday = monday.addDays(5);
+    final sunday = monday.addDays(6);
 
-      res.day.should.be(15);
-      res.month.should.be(5);
-      res.year.should.be(2021);
+    test('startOfWeek', () {
+      monday.startOfWeek.should.be(monday);
+      tuesday.startOfWeek.should.be(monday);
+      wednesday.startOfWeek.should.be(monday);
+      thursday.startOfWeek.should.be(monday);
+      friday.startOfWeek.should.be(monday);
+      saturday.startOfWeek.should.be(monday);
+      sunday.startOfWeek.should.be(monday);
+
+      monday.endOfWeek.should.be(sunday);
+      tuesday.endOfWeek.should.be(sunday);
+      wednesday.endOfWeek.should.be(sunday);
+      thursday.endOfWeek.should.be(sunday);
+      friday.endOfWeek.should.be(sunday);
+      saturday.endOfWeek.should.be(sunday);
+      sunday.endOfWeek.should.be(sunday);
     });
 
-    then('End of ISO week', () {
-      final res = date.endOfISOWeek;
+    test('startOfWeekend and endOfWeekend', () {
+      monday.startOfWeekend.should.be(saturday);
+      tuesday.startOfWeekend.should.be(saturday);
+      wednesday.startOfWeekend.should.be(saturday);
+      thursday.startOfWeekend.should.be(saturday);
+      friday.startOfWeekend.should.be(saturday);
+      saturday.startOfWeekend.should.be(saturday);
+      sunday.startOfWeekend.should.be(saturday);
 
-      res.day.should.be(16);
-      res.month.should.be(5);
-      res.year.should.be(2021);
-    });
-
-    then('Start of weekend', () {
-      final res = date.endOfWeekend;
-
-      res.day.should.be(16);
-      res.month.should.be(5);
-      res.year.should.be(2021);
+      monday.endOfWeekend.should.be(sunday);
+      tuesday.endOfWeekend.should.be(sunday);
+      wednesday.endOfWeekend.should.be(sunday);
+      thursday.endOfWeekend.should.be(sunday);
+      friday.endOfWeekend.should.be(sunday);
+      saturday.endOfWeekend.should.be(sunday);
+      sunday.endOfWeekend.should.be(sunday);
     });
   });
 
@@ -589,37 +579,21 @@ void main() {
       const Date(year: 2005, month: DateTime.january, day: 2)
           .getWeek
           .should
-          .be(1);
-    });
-
-    then('getWeekPreviousYear', () {
-      const Date(year: 2005, month: DateTime.january).getWeek.should.be(53);
+          .be(53);
     });
 
     then('getWeekBefore100AD', () {
       const Date(year: 7, month: DateTime.december, day: 30)
-          .getISOWeek
+          .getWeek
           .should
           .be(52);
     });
 
-    then('getISOWeek', () {
+    then('getWeek', () {
       const Date(year: 2005, month: DateTime.january, day: 3)
-          .getISOWeek
+          .getWeek
           .should
           .be(1);
-    });
-
-    then('getISOWeekPreviousYear', () {
-      const Date(year: 2005, month: DateTime.january, day: 2)
-          .getISOWeek
-          .should
-          .be(53);
-    });
-
-    then('ISOWeek - Week compare', () {
-      const Date(year: 1922, month: DateTime.january).getWeek.should.be(1);
-      const Date(year: 1922, month: DateTime.january).getISOWeek.should.be(52);
     });
   });
 
