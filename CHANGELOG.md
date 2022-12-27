@@ -1,3 +1,17 @@
+## 0.8.0
+
+* [Changed] `Time` formatting with `enum`
+* [Changed] `Time` toString now is 'HH:mm:ss:SSS'
+* [Remove]  `totalMilliseconds` use `inMilliseconds` instead
+* [Fix] typos
+
+## 0.7.1
+
+* [Add] `milliseconds`
+
+## 0.6.1
+
+* [Add] extension on `DateFormat` to format `Date`
 ## 0.6.0
 
 * **[BREAKING CHANGE]** getters `now` of `Date` and `Time` into method `now()`
