@@ -4,11 +4,11 @@
 [![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
 [![Dart](https://github.com/AndrewPiterov/date_time/actions/workflows/dart.yml/badge.svg)](https://github.com/AndrewPiterov/date_time/actions/workflows/dart.yml)
 
-# date_time
+# date_time_iso
 
-Package to work with **Date** & **Time** in separation and with its ranges.
+[date_time](https://github.com/AndrewPiterov/date_time), but ISO
 
-This project will be useful for projects that are related to booking.
+Package to work with **date** & **time** in separation and with its ranges.
 
 ## Features
 
@@ -24,13 +24,13 @@ This project will be useful for projects that are related to booking.
 
 ```yml
 dependencies:
-  date_time: <newest>
+  date_time_iso: <newest>
 ```
 
 2. Import the dependency
 
 ```dart
-import 'package:date_time/date_time.dart';
+import 'package:date_time_iso/date_time_iso.dart';
 ```
 
 ## Usage
