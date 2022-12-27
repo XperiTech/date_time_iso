@@ -1,5 +1,5 @@
-import 'date_time_error.dart';
-import 'time.dart';
+import 'package:date_time_iso/src/date_time_error.dart';
+import 'package:date_time_iso/src/time.dart';
 
 class TimeRange {
   const TimeRange(this.start, this.end);

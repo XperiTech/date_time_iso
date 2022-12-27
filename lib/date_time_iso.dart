@@ -1,4 +1,4 @@
-library date_time;
+library date_time_iso;
 
 export './src/date.dart';
 export './src/date_range.dart';

@@ -1,6 +1,6 @@
 // ignore_for_file: avoid_print
 
-import 'package:date_time/date_time.dart';
+import 'package:date_time_iso/date_time_iso.dart';
 
 void main() {
   final dateTime = DateTime.now();

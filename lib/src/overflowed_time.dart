@@ -1,4 +1,4 @@
-import 'time.dart';
+import 'package:date_time_iso/src/time.dart';
 
 /// To keep days
 class OverflowedTime extends Time {

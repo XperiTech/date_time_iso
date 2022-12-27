@@ -1,10 +1,9 @@
 // ignore_for_file: constant_identifier_names, prefer_constructors_over_static_methods
 
 import 'package:clock/clock.dart';
-import 'package:date_time/date_time.dart';
+import 'package:date_time_iso/src/extensions.dart';
+import 'package:date_time_iso/src/overflowed_time.dart';
 import 'package:quiver/core.dart';
-
-import 'overflowed_time.dart';
 
 /// Format time
 ///

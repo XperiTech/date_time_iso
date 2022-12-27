@@ -1,5 +1,5 @@
-import 'date.dart';
-import 'time.dart';
+import 'package:date_time_iso/src/date.dart';
+import 'package:date_time_iso/src/time.dart';
 
 /// Extensions on [DateTime]
 extension DateTimeExtensions on DateTime {
