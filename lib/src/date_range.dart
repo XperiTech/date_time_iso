@@ -15,6 +15,9 @@ class DateRange {
   ///
   bool get isValid => start <= end;
 
+  /// Difference between [start] and [end]
+  Duration get duration => end.asDateTime.difference(start.asDateTime);
+
   @override
   bool operator ==(Object other) =>
       other is DateRange && other.start == start && other.end == end;

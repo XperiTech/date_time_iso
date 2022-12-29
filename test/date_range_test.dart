@@ -1,6 +1,7 @@
 import 'package:date_time_iso/date_time_iso.dart';
 import 'package:given_when_then_unit_test/given_when_then_unit_test.dart';
 import 'package:shouldly/shouldly.dart';
+import 'package:test/expect.dart';
 import 'package:test/scaffolding.dart';
 
 void main() {
@@ -38,5 +39,14 @@ void main() {
     );
 
     dateRange2.should.be(dateRange1);
+  });
+
+  test('computes difference between start and end', () {
+    const range = DateRange(
+      Date(year: 2021, month: 3, day: 3),
+      Date(year: 2021, month: 3, day: 7),
+    );
+
+    expect(range.duration.inDays, equals(4));
   });
 }
