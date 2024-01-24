@@ -1,3 +1,6 @@
+## 1.0.0
+* **[BREAKING CHANGE]** Rewrite API to use ISO
+
 ## 0.8.0
 
 * [Changed] `Time` formatting with `enum`
