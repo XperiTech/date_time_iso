@@ -1,3 +1,6 @@
+## 1.0.1
+* [Documentation] Fix repository URL in pubspec
+
 ## 1.0.0
 * **[BREAKING CHANGE]** Rewrite API to use ISO
 

@@ -1,15 +1,16 @@
 name: date_time_iso
 description: Package to work with ISO date & time in separation and with its ranges.
-version: 1.0.0
-homepage: https://github.com/XperiTech/date_time
+version: 1.0.1
+homepage: https://github.com/XperiTech
+repository: https://github.com/XperiTech/date_time_iso
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
-  quiver: ">=3.2.1 <3.3.0"
-  intl: ">=0.18.0 <0.20.0"
   clock: ">=1.1.1 <1.2.0"
+  intl: ">=0.18.0 <0.20.0"
+  quiver: ">=3.2.1 <3.3.0"
 
 dev_dependencies:
   given_when_then_unit_test: ^0.1.0
