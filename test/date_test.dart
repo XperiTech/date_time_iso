@@ -35,11 +35,11 @@ void main() {
     });
 
     then('Future', () {
-      (today.addDays(1).isFuture).should.beTrue();
+      today.addDays(1).isFuture.should.beTrue();
     });
 
     then('Past', () {
-      (today.subDays(1).isPast).should.beTrue();
+      today.subDays(1).isPast.should.beTrue();
     });
   });
 
@@ -47,31 +47,31 @@ void main() {
     const monday = Date(year: 2022, day: 3);
 
     then('Is Monday', () {
-      (monday.isMonday).should.beTrue();
+      monday.isMonday.should.beTrue();
     });
 
     then('Is Tuesday', () {
-      (monday.addDays(1).isTuesday).should.beTrue();
+      monday.addDays(1).isTuesday.should.beTrue();
     });
 
     then('Is Wednesday', () {
-      (monday.addDays(2).isWednesday).should.beTrue();
+      monday.addDays(2).isWednesday.should.beTrue();
     });
 
     then('Is Thursday', () {
-      (monday.addDays(3).isThursday).should.beTrue();
+      monday.addDays(3).isThursday.should.beTrue();
     });
 
     then('Is Friday', () {
-      (monday.addDays(4).isFriday).should.beTrue();
+      monday.addDays(4).isFriday.should.beTrue();
     });
 
     then('Is Saturday', () {
-      (monday.addDays(5).isSaturday).should.beTrue();
+      monday.addDays(5).isSaturday.should.beTrue();
     });
 
     then('Is Sunday', () {
-      (monday.addDays(6).isSunday).should.beTrue();
+      monday.addDays(6).isSunday.should.beTrue();
     });
   });
 

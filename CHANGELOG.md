@@ -2,6 +2,7 @@
 * [Refactor] remove quiver dependency
 * [Add] Date.daysUntil
 * [Doc] update readme
+* [Doc] resolve analysis issues
 
 ## 1.0.1
 * [Documentation] Fix repository URL in pubspec

@@ -1,5 +1,3 @@
-library date_time_iso;
-
 export 'src/date.dart';
 export 'src/date_range.dart';
 export 'src/date_time_error.dart';

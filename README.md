@@ -1,6 +1,5 @@
 [![pub package](https://img.shields.io/pub/v/date_time.svg?label=date_time&color=blue)](https://pub.dev/packages/date_time_iso)
 [![codecov](https://codecov.io/gh/XperiTech/date_time_iso/branch/dev/graph/badge.svg?token=36Q2MEZIWM)](https://codecov.io/gh/AndrewPiterov/date_time)
-[![likes](https://badges.bar/date_time_iso/likes)](https://pub.dev/packages/date_time_iso/score)
 [![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
 [![Dart](https://github.com/XperiTech/date_time_iso/actions/workflows/dart.yaml/badge.svg)](https://github.com/XperiTech/date_time_iso/actions/workflows/dart.yaml)
 

@@ -1,6 +1,7 @@
 import 'package:date_time_iso/src/date_time_error.dart';
 import 'package:date_time_iso/src/time.dart';
 
+/// Represents a range between [start] and [end]
 class TimeRange {
   /// Initialize new `TimeRange` instance
   const TimeRange(this.start, this.end);

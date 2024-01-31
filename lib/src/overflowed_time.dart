@@ -4,11 +4,11 @@ import 'package:date_time_iso/src/time.dart';
 class OverflowedTime extends Time {
   /// Initialize new `OverflowedTime` instance
   const OverflowedTime({
-    required int hour,
+    required super.hour,
     required this.days,
-    int minute = 0,
-    int second = 0,
-  }) : super(hour: hour, minute: minute, second: second);
+    super.minute,
+    super.second,
+  });
 
   /// Days
   final int days;
