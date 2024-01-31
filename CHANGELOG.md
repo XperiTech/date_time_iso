@@ -1,3 +1,6 @@
+## 1.0.3
+* [Doc] update pub version badge
+
 ## 1.0.2
 * [Refactor] remove quiver dependency
 * [Add] Date.daysUntil
