@@ -329,6 +329,12 @@ class Date {
   bool get isWeekend =>
       weekday == DateTime.saturday || weekday == DateTime.sunday;
 
+  /// Returns days between this date and [other]
+  ///
+  /// can be both a negative ([other] in the past)
+  /// and positive ([other in the future]) number
+  int daysUntil(Date other) => other.asDateTime.difference(asDateTime).inDays;
+
   bool operator >(Date other) => isAfter(other);
 
   bool operator >=(Date other) => isSameOrAfter(other);

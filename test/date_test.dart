@@ -672,4 +672,12 @@ void main() {
       date.copyWith(day: 13).should.be(Date(year: 2022, month: 5, day: 13));
     });
   });
+
+  test('calculates days between two dates', () {
+    const date = Date(year: 2022, month: 5, day: 7);
+
+    date.daysUntil(Date(year: 2022, month: 5, day: 7)).should.be(0);
+    date.daysUntil(Date(year: 2024, month: 1, day: 31)).should.be(634);
+    date.daysUntil(Date(year: 2021, month: 8, day: 18)).should.be(-262);
+  });
 }
