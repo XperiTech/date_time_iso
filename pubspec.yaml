@@ -1,6 +1,6 @@
 name: date_time_iso
 description: Package to work with ISO date & time in separation and with its ranges.
-version: 1.0.3
+version: 1.0.4
 homepage: https://github.com/XperiTech
 repository: https://github.com/XperiTech/date_time_iso
 

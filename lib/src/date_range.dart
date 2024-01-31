@@ -5,17 +5,18 @@ class DateRange {
   /// Initialize `DateRange`
   const DateRange(this.start, this.end);
 
-  ///
   final Date start;
-
-  ///
   final Date end;
 
-  ///
+  /// Returns whether or not [start] is before [end].
   bool get isValid => start <= end;
 
   /// Difference between [start] and [end]
   Duration get duration => end.asDateTime.difference(start.asDateTime);
+
+  /// Returns whether or not [date] is contained in this range.
+  bool contains(Date date) =>
+      start.isSameOrBefore(date) && date.isSameOrBefore(end);
 
   @override
   bool operator ==(Object other) =>

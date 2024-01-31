@@ -1,3 +1,6 @@
+## 1.0.4
+* [Add] DateRange.contains
+
 ## 1.0.3
 * [Doc] update pub version badge
 
