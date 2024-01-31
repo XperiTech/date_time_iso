@@ -1,8 +1,8 @@
-[![pub package](https://img.shields.io/pub/v/date_time.svg?label=date_time&color=blue)](https://pub.dev/packages/date_time)
-[![codecov](https://codecov.io/gh/AndrewPiterov/date_time/branch/dev/graph/badge.svg?token=VM9LTJXGQS)](https://codecov.io/gh/AndrewPiterov/date_time)
-[![likes](https://badges.bar/date_time/likes)](https://pub.dev/packages/date_time/score)
+[![pub package](https://img.shields.io/pub/v/date_time.svg?label=date_time&color=blue)](https://pub.dev/packages/date_time_iso)
+[![codecov](https://codecov.io/gh/XperiTech/date_time_iso/branch/dev/graph/badge.svg?token=36Q2MEZIWM)](https://codecov.io/gh/AndrewPiterov/date_time)
+[![likes](https://badges.bar/date_time_iso/likes)](https://pub.dev/packages/date_time_iso/score)
 [![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
-[![Dart](https://github.com/AndrewPiterov/date_time/actions/workflows/dart.yml/badge.svg)](https://github.com/AndrewPiterov/date_time/actions/workflows/dart.yml)
+[![Dart](https://github.com/XperiTech/date_time_iso/actions/workflows/dart.yaml/badge.svg)](https://github.com/XperiTech/date_time_iso/actions/workflows/dart.yaml)
 
 # date_time_iso
 
@@ -151,6 +151,12 @@ We accept the following contributions:
 
 ## Maintainers
 
+### This fork:
+* [XperiTech](mailto:karol@xperitech.com?subject=[GitHub]%20Source%20Dart%20date_time_iso)
+
+[xperitech.com](https://www.xperitech.com)
+
+### Base repo:
 * [Andrew Piterov](mailto:contact@andrewpiterov.com?subject=[GitHub]%20Source%20Dart%20date_time)
 
 <a href="https://www.buymeacoffee.com/devcraft.ninja" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Support me" height="41" width="174"></a>
