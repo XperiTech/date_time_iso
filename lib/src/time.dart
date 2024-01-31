@@ -3,7 +3,6 @@
 import 'package:clock/clock.dart';
 import 'package:date_time_iso/src/extensions.dart';
 import 'package:date_time_iso/src/overflowed_time.dart';
-import 'package:quiver/core.dart';
 
 /// Format time
 ///
@@ -351,12 +350,7 @@ class Time {
   }
 
   @override
-  int get hashCode => hash4(
-        hour.hashCode,
-        minute.hashCode,
-        second.hashCode,
-        millisecond.hashCode,
-      );
+  int get hashCode => Object.hash(hour, minute, second, millisecond);
 
   /// Represent the time as a `String` in the format `HH:mm:ss`
   @override

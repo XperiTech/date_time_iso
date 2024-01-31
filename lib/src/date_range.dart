@@ -1,5 +1,4 @@
 import 'package:date_time_iso/src/date.dart';
-import 'package:quiver/core.dart';
 
 ///
 class DateRange {
@@ -23,7 +22,7 @@ class DateRange {
       other is DateRange && other.start == start && other.end == end;
 
   @override
-  int get hashCode => hash2(
+  int get hashCode => Object.hash(
         start.hashCode,
         end.hashCode,
       );

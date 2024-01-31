@@ -1,3 +1,6 @@
+## 1.0.2
+* [Refactor] remove quiver dependency
+
 ## 1.0.1
 * [Documentation] Fix repository URL in pubspec
 

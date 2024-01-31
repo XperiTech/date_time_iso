@@ -1,7 +1,6 @@
 import 'package:clock/clock.dart';
 import 'package:date_time_iso/src/extensions.dart';
 import 'package:intl/intl.dart';
-import 'package:quiver/core.dart';
 
 /// Date object
 class Date {
@@ -346,7 +345,7 @@ class Date {
       other.day == day;
 
   @override
-  int get hashCode => hash3(
+  int get hashCode => Object.hash(
         year.hashCode,
         month.hashCode,
         day.hashCode,
