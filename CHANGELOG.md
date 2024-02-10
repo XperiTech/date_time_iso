@@ -1,56 +1,67 @@
+## 1.0.5
+
+-   **[BREAKING]** DateRange no longer has const constructor
+-   [Add] DateRange is now an Iterable
+
 ## 1.0.4
-* [Add] DateRange.contains
+
+-   [Add] DateRange.contains
 
 ## 1.0.3
-* [Doc] update pub version badge
+
+-   [Doc] update pub version badge
 
 ## 1.0.2
-* [Refactor] remove quiver dependency
-* [Add] Date.daysUntil
-* [Doc] update readme
-* [Doc] resolve analysis issues
+
+-   [Refactor] remove quiver dependency
+-   [Add] Date.daysUntil
+-   [Doc] update readme
+-   [Doc] resolve analysis issues
 
 ## 1.0.1
-* [Documentation] Fix repository URL in pubspec
+
+-   [Documentation] Fix repository URL in pubspec
 
 ## 1.0.0
-* **[BREAKING CHANGE]** Rewrite API to use ISO
+
+-   **[BREAKING CHANGE]** Rewrite API to use ISO
 
 ## 0.8.0
 
-* [Changed] `Time` formatting with `enum`
-* [Changed] `Time` toString now is 'HH:mm:ss:SSS'
-* [Remove]  `totalMilliseconds` use `inMilliseconds` instead
-* [Fix] typos
+-   [Changed] `Time` formatting with `enum`
+-   [Changed] `Time` toString now is 'HH:mm:ss:SSS'
+-   [Remove] `totalMilliseconds` use `inMilliseconds` instead
+-   [Fix] typos
 
 ## 0.7.1
 
-* [Add] `milliseconds`
+-   [Add] `milliseconds`
 
 ## 0.6.1
 
-* [Add] extension on `DateFormat` to format `Date`
+-   [Add] extension on `DateFormat` to format `Date`
+
 ## 0.6.0
 
-* **[BREAKING CHANGE]** getters `now` of `Date` and `Time` into method `now()`
-* **[BREAKING CHANGE]** constructors of `Date` and `Time` with required named parameters
-* [Add] `copyWith()` for `Date` and `Time`
+-   **[BREAKING CHANGE]** getters `now` of `Date` and `Time` into method `now()`
+-   **[BREAKING CHANGE]** constructors of `Date` and `Time` with required named parameters
+-   [Add] `copyWith()` for `Date` and `Time`
 
 ## 0.5.0
 
-* [Add] getter `now` for `Date`
-* [Add] methods `parse` & `tryParse` for `Date`
-* [Add] methods `addDuration(dur:)`, `closeTo()`, `formatAs()` for `Time`
-* [Add] new date functions and manipulations. Inspirited by dart_date (thanks for [westito](https://github.com/westito))
+-   [Add] getter `now` for `Date`
+-   [Add] methods `parse` & `tryParse` for `Date`
+-   [Add] methods `addDuration(dur:)`, `closeTo()`, `formatAs()` for `Time`
+-   [Add] new date functions and manipulations. Inspirited by dart_date (thanks for [westito](https://github.com/westito))
 
 ## 0.4.5
 
-* [Add] arithmetic operators
+-   [Add] arithmetic operators
 
 ## 0.4.4
 
-* [Add] `OverflowedTime`
-* [Add] more tests
+-   [Add] `OverflowedTime`
+-   [Add] more tests
 
 ## 0.3.3
 
@@ -62,16 +73,16 @@
 
 ## 0.1.2
 
-* [Add] `upTo` for `TimeRange`
-* [Add] `format` for `Time`
-* [Rename] `isInRange` to `contains`
+-   [Add] `upTo` for `TimeRange`
+-   [Add] `format` for `Time`
+-   [Rename] `isInRange` to `contains`
 
 ## 0.0.2
 
-* [Add] examples
+-   [Add] examples
 
 ## 0.0.1
 
-* [Add] `Date` and `DateRange` classes
-* [Add] `Time` and `TimeRange` classes
-* [Add] extensions for `DateTime` to separate `Date` & `Time`
+-   [Add] `Date` and `DateRange` classes
+-   [Add] `Time` and `TimeRange` classes
+-   [Add] extensions for `DateTime` to separate `Date` & `Time`
