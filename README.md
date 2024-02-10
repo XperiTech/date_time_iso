@@ -11,11 +11,11 @@ Package to work with **date** & **time** in separation and with its ranges.
 
 ## Features
 
-* Only Date comparison
-* Only Time comparison
-* Overflowed Time with keeping days
-* Find crossing of dates
-* Find crossing of times in the day
+-   Only Date comparison
+-   Only Time comparison
+-   Overflowed Time with keeping days
+-   Find crossing of dates
+-   Find crossing of times in the day
 
 ## Getting started
 
@@ -23,7 +23,7 @@ Package to work with **date** & **time** in separation and with its ranges.
 
 ```yml
 dependencies:
-  date_time_iso: <newest>
+    date_time_iso: <newest>
 ```
 
 2. Import the dependency
@@ -70,12 +70,10 @@ print(date.copyWith(year: 2022)); // prints 07/03/2022
 ```dart
 final range = DateRange(
   const Date(year: 2021, month: 1, day: 1),
-  const Date(year: 2021, month: 12, day: 31),
+  const Date(year: 2021, month: 1, day: 3),
 );
 
-test('should be valid', () {
-  range.isValid.should.beTrue();
-});
+inspect(range.toList()) // [2021-01-01, 2021-01-02, 2021-01-03]
 ```
 
 ### Time
@@ -125,8 +123,8 @@ withClock(
     Clock(() => DateTime.now().subtract(Duration(days: 10, minutes: 214))),
     () {
         print(clock.now());                    // 2022-06-21 16:28:46.366887
-        print(DateTime.now());                 // 2022-07-01 20:02:46.367579    
-        print('${Date.now()} ${Time.now()}');  // 6/21/2022 16:28:46                  
+        print(DateTime.now());                 // 2022-07-01 20:02:46.367579
+        print('${Date.now()} ${Time.now()}');  // 6/21/2022 16:28:46
     },
 );
 ```
@@ -144,18 +142,20 @@ If you fixed a bug or implemented a new feature, please send a [pull request](ht
 
 We accept the following contributions:
 
-* New features
-* Improving documentation
-* Fixing bugs
+-   New features
+-   Improving documentation
+-   Fixing bugs
 
 ## Maintainers
 
 ### This fork:
-* [XperiTech](mailto:karol@xperitech.com?subject=[GitHub]%20Source%20Dart%20date_time_iso)
+
+-   [XperiTech](mailto:karol@xperitech.com?subject=[GitHub]%20Source%20Dart%20date_time_iso)
 
 [xperitech.com](https://www.xperitech.com)
 
 ### Base repo:
-* [Andrew Piterov](mailto:contact@andrewpiterov.com?subject=[GitHub]%20Source%20Dart%20date_time)
+
+-   [Andrew Piterov](mailto:contact@andrewpiterov.com?subject=[GitHub]%20Source%20Dart%20date_time)
 
 <a href="https://www.buymeacoffee.com/devcraft.ninja" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Support me" height="41" width="174"></a>
