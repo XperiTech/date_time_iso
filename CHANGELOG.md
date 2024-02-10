@@ -1,3 +1,7 @@
+## 1.0.6
+
+-   [Add] Date.isFirstDayOfWeek, Date.isFirstDayOfYear
+
 ## 1.0.5
 
 -   **[BREAKING]** DateRange no longer has const constructor

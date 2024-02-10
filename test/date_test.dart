@@ -93,13 +93,27 @@ void main() {
     const date4 = Date(year: 2022, day: 7);
     const date5 = Date(year: 2022, month: 2, day: 15);
     const date6 = Date(year: 2022, month: 12, day: 15);
+    const date7 = Date(year: 2022, month: 2, day: 1);
 
     then('isLastDay of month', () {
       const Date(year: 2021, day: 31).isLastDayOfMonth.should.beTrue();
     });
 
-    then('isFirstDay of month', () {
-      const Date(year: 2021).isFirstDayOfMonth.should.beTrue();
+    then('is first day of week', () {
+      date3.isFirstDayOfWeek.should.beTrue();
+      date1.isFirstDayOfWeek.should.beFalse();
+    });
+
+    then('is first day of month', () {
+      date1.isFirstDayOfMonth.should.beTrue();
+      date2.isFirstDayOfMonth.should.beFalse();
+      date7.isFirstDayOfMonth.should.beTrue();
+    });
+
+    then('is first day of year', () {
+      date1.isFirstDayOfYear.should.beTrue();
+      date2.isFirstDayOfYear.should.beFalse();
+      date7.isFirstDayOfYear.should.beFalse();
     });
 
     then('is weekend', () {

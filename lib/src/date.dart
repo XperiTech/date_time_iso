@@ -273,8 +273,14 @@ class Date {
   /// Return true if this date day is sunday
   bool get isSunday => weekday == DateTime.sunday;
 
+  /// Is the given date the first day of a week?
+  bool get isFirstDayOfWeek => isSameDay(startOfWeek);
+
   /// Is the given date the first day of a month?
   bool get isFirstDayOfMonth => isSameDay(startOfMonth);
+
+  /// Is the given date the first day of a year?
+  bool get isFirstDayOfYear => isSameDay(startOfYear);
 
   /// Return true if this date [isAfter] [Date.now]
   bool get isFuture => isAfter(Date.today());
